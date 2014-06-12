@@ -20,10 +20,12 @@ This plugin adds a method-parameter to the twig sort-filter in Craft-CMS.
 
 
 **Install:**
+
 Copy the *twigbettersort* folder to craft/plugins/
 
 
 **Roadmap:**
+
 Add more methods:
 
  - natcasesort()
