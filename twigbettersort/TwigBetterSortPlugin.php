@@ -32,7 +32,7 @@ class TwigBetterSortPlugin extends BasePlugin
         return 'https://github.com/victor-in/';
     }
 
-    function hookAddTwigExtension()
+    function addTwigExtension()
     {
         Craft::import('plugins.twigbettersort.twigextensions.TwigBetterSortTwigExtension');
         return new TwigBetterSortTwigExtension();
