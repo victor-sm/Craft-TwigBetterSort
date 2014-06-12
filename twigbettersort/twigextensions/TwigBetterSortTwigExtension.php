@@ -21,31 +21,42 @@ class TwigBetterSortTwigExtension extends \Twig_Extension
     $this->env = $env;
   }
 
-  public function twig_sort($array, $method='asort')
+  public function twig_sort($array, $method='asort', $sort_flag='SORT_REGULAR')
   {
-	switch ($method) {
+	settype($sort_flag, 'integer');
+	
+	switch ($method)
+	{
 		case 'asort':
-			asort($array);
+			asort($array, $sort_flag);
 			break;
 			
 		case 'arsort':
-			arsort($array);
+			arsort($array, $sort_flag);
 			break;
 			
 		case 'krsort':
-			krsort($array);
+			krsort($array, $sort_flag);
 			break;
 			
 		case 'ksort':
-			ksort($array);
+			ksort($array, $sort_flag);
 			break;
 		
+		case 'natcasesort':
+			natcasesort($array);
+			break;
+			
 		case 'natsort':
 			natsort($array);
 			break;
 			
 		case 'rsort':
-			rsort($array);
+			rsort($array, $sort_flag);
+			break;
+			
+		case 'sort':
+			sort($array, $sort_flag);
 			break;
 	}
 	
