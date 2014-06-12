@@ -32,7 +32,7 @@ This plugin adds new sorting-methods to Twigs sort-filter in Craft-CMS.
 If the php-function supports sort-flags, you can pass them in a third parameter.
 
 ```twig
-{% for entry in craft.entries.section('news').find()|sort('natsort', 'SORT_NUMERIC') %}....{% endfor %}
+{% for entry in craft.entries.section('news').find()|sort('sort', 'SORT_NUMERIC') %}....{% endfor %}
 ```
 
 
