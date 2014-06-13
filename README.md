@@ -1,7 +1,7 @@
 Craft-TwigBetterSort
 ====================
 
-This plugin adds new sorting-methods to Twigs sort-filter in Craft-CMS.
+This plugin allows you to specify the sorting-method for Twigs sort-filter in Craft-CMS.
 
 ##Methods:
 
@@ -29,7 +29,7 @@ This plugin adds new sorting-methods to Twigs sort-filter in Craft-CMS.
 
 **Sort-flags:**
 
-If the php-function supports sort-flags, you can pass them in a third parameter.
+If the php-function supports sort-flags, you can pass them in a second parameter.
 
 ```twig
 {% for entry in craft.entries.section('news').find()|sort('sort', 'SORT_NUMERIC') %}....{% endfor %}
@@ -38,10 +38,8 @@ If the php-function supports sort-flags, you can pass them in a third parameter.
 
 ##Install:
 
-1. Copy 'twigbettersort' to 'craft/plugins/'.
-2. Go to the backend.
-3. Go to Settings -> Plugins.
-4. Activate 'Twig Better Sort Filter'.
+1. Move the `twigbettersort` directory into the `craft/plugins/` directory.
+2. Go to Settings -> Plugins and enable 'Twig Better Sort Filter'.
 
 
 ##Note:
