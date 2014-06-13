@@ -42,3 +42,24 @@ If the php-function supports sort-flags, you can pass them in a third parameter.
 2. Go to the backend.
 3. Go to Settings -> Plugins.
 4. Activate 'Twig Better Sort Filter'.
+
+
+##Note:
+
+If another plugin tries to override the sort-filter, only the latest override will be applied.
+
+To avoid this, open 'TwigBetterSortTwigExtension.php' and replace:
+```php
+return array('sort' => new \Twig_Filter_Method($this, 'twig_sort'));
+```
+
+with
+```php
+return array('better_sort' => new \Twig_Filter_Method($this, 'twig_sort'));
+```
+
+This will leave the sort-filter alone and create a 'better_sort'-filter instead:
+
+```twig
+|better_sort(method, sort-flag)
+```
