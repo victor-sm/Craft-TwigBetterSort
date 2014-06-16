@@ -1,7 +1,5 @@
 <?php
 /**
- * Expand links in tweets: plugin for Craft CMS
- *
  * @package   Twig Better Sort
  * @author    Victor In.
  * @copyright Copyright 2014
